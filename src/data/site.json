@@ -1,0 +1,53 @@
+{
+  "company": {
+    "name": "EKOCENTRAL",
+    "nip": "9671221980",
+    "tagline": "Hurtownia instalacyjna",
+    "subtitle": "Technika grzewcza i sanitarna"
+  },
+  "seo": {
+    "title": "Hurtownia instalacyjna - wsparcie dla fachowców",
+    "description": "Oferujemy najwyższej jakości produkty do systemów grzewczych i sanitarnych. Dzięki konkurencyjnym cenom, szybkiej dostawie i wsparciu technicznemu, jesteśmy zaufanym partnerem w branży instalacyjnej."
+  },
+  "contact": {
+    "address": {
+      "street": "ul. Grunwaldzka 227",
+      "city": "Bydgoszcz",
+      "zip": "85-451",
+      "full": "ul. Grunwaldzka 227, 85-451 Bydgoszcz"
+    },
+    "phones": ["662 486 950", "662 486 991"],
+    "emails": ["biuro@ekocentral.pl", "kontakt@ekocentral.pl"]
+  },
+  "hours": {
+    "weekdays": { "label": "Pon - Pt", "open": "06:30", "close": "17:00" },
+    "saturday": { "label": "Sobota", "open": "07:00", "close": "13:00" },
+    "sunday": { "label": "Niedziela", "status": "Zamknięte" }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=61574630940921&locale=pl_PL",
+    "instagram": "https://instagram.com"
+  },
+  "features": [
+    {
+      "title": "Wysoka jakość produktów",
+      "description": "W EKOCENTRAL dbamy o najwyższe standardy jakości naszych produktów. Oferujemy asortyment, który spełnia oczekiwania nawet najbardziej wymagających klientów z branży instalacyjnej.",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Szybka dostawa",
+      "description": "Zdajemy sobie sprawę, jak ważny jest czas w branży budowlanej. Dlatego zapewniamy błyskawiczną dostawę, aby nasi klienci mogli szybko realizować swoje projekty.",
+      "icon": "truck"
+    },
+    {
+      "title": "Wsparcie techniczne",
+      "description": "Nasi eksperci są zawsze gotowi do pomocy. Oferujemy fachowe doradztwo oraz wsparcie techniczne, aby ułatwić naszym klientom wybór i montaż systemów instalacyjnych.",
+      "icon": "headset"
+    },
+    {
+      "title": "Konkurencyjne ceny",
+      "description": "W EKOCENTRAL zapewniamy atrakcyjne ceny na wszystkie nasze produkty. Dzięki temu nasi klienci mogą korzystać z wysokiej jakości bez obciążania swojego budżetu.",
+      "icon": "badge-percent"
+    }
+  ]
+}
