@@ -5,7 +5,8 @@ const nextConfig = {
   basePath: '/ekocentral-page',
   assetPrefix: '/ekocentral-page/',
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './imageLoader.ts',
   },
 };
 
