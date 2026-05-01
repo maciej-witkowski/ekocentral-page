@@ -2,5 +2,6 @@ export default function imageLoader({ src }: { src: string }) {
   if (src.startsWith('http')) {
     return src;
   }
-  return `/ekocentral-page${src}`;
+  const path = src.startsWith('/') ? src : `/${src}`;
+  return `/ekocentral-page${path}`;
 }
