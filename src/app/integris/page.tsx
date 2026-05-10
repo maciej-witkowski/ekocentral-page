@@ -25,17 +25,17 @@ export default function IntegrisPage() {
               <span className="text-mint-500 font-semibold text-sm uppercase tracking-widest">
                 Projekt INTEGRIS+
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-3 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
                 Łączymy Instalatorów, Hurtownie i Marki
               </h2>
               <div className="w-16 h-1 rounded-full bg-mint-500 mx-auto mb-8" />
-              <p className="text-gray-500 leading-relaxed max-w-2xl mx-auto mb-4">
+              <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4">
                 Integris+ to projekt, który łączy Instalatorów, Hurtownie oraz
                 czołowe Marki Producenckie. Naszym celem jest prezentacja
                 sprawdzonych dostawców, których produkty cieszą się największym
                 zainteresowaniem, a także marek o dużym potencjale rynkowym.
               </p>
-              <p className="text-gray-500 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
                 W tegorocznej edycji po raz pierwszy swoją ofertę przedstawią
                 Salus, Uponor, Thermes oraz Werit.
               </p>
@@ -56,7 +56,7 @@ export default function IntegrisPage() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.3} className="text-center mt-8">
-            <p className="text-gray-500 mb-6">
+            <p className="text-text-secondary mb-6">
               Pełną listę producentów uczestniczących w tej edycji znajdziesz{" "}
               <a
                 href="https://integrisplus.pl/index.php?sid=ba1c316d4ac6b3165d8e58b5b26f7e9f#partnerzy"

@@ -23,7 +23,7 @@ export function Footer() {
   const { contact, hours, social, company } = siteData;
 
   return (
-    <footer className="bg-navy-900 text-white">
+    <footer className="bg-navy-900 dark:bg-gray-900 text-white">
       {/* Gradient line */}
       <div className="h-1 bg-gradient-to-r from-mint-500 via-mint-400 to-mint-500" />
 

@@ -29,18 +29,18 @@ export default function KontaktPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact info */}
             <AnimatedSection>
-              <h2 className="text-3xl font-bold text-navy-900 mb-8">
+              <h2 className="text-3xl font-bold text-foreground mb-8">
                 Skontaktuj się z nami
               </h2>
 
               <div className="space-y-6">
                 {/* Phone departments */}
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
+                <div className="flex items-start gap-4 p-6 rounded-xl bg-surface hover:bg-mint-200/20 dark:hover:bg-mint-500/10 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-navy-900 mb-4">Telefon</h3>
+                    <h3 className="font-semibold text-foreground mb-4">Telefon</h3>
                     <div className="space-y-4">
                       {contact.departments.map((dept) => (
                         <div key={dept.name}>
@@ -48,7 +48,7 @@ export default function KontaktPage() {
                             <span className="text-mint-500">
                               {departmentIcons[dept.name]}
                             </span>
-                            <span className="text-xs font-semibold uppercase tracking-wider text-navy-900/70">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-foreground/70">
                               {dept.name}
                             </span>
                           </div>
@@ -57,9 +57,9 @@ export default function KontaktPage() {
                               <a
                                 key={c.phone}
                                 href={`tel:${formatPhone(c.phone)}`}
-                                className="flex items-center justify-between text-sm text-gray-500 hover:text-mint-500 transition-colors py-0.5"
+                                className="flex items-center justify-between text-sm text-text-secondary hover:text-mint-500 transition-colors py-0.5"
                               >
-                                <span className="font-medium text-navy-900/80">{c.person}</span>
+                                <span className="font-medium text-foreground/80">{c.person}</span>
                                 <span>{c.phone}</span>
                               </a>
                             ))}
@@ -71,17 +71,17 @@ export default function KontaktPage() {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
+                <div className="flex items-start gap-4 p-6 rounded-xl bg-surface hover:bg-mint-200/20 dark:hover:bg-mint-500/10 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy-900 mb-1">Email</h3>
+                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
                     {contact.emails.map((email) => (
                       <a
                         key={email}
                         href={`mailto:${email}`}
-                        className="block text-gray-500 hover:text-mint-500 transition-colors"
+                        className="block text-text-secondary hover:text-mint-500 transition-colors"
                       >
                         {email}
                       </a>
@@ -90,33 +90,33 @@ export default function KontaktPage() {
                 </div>
 
                 {/* Address */}
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
+                <div className="flex items-start gap-4 p-6 rounded-xl bg-surface hover:bg-mint-200/20 dark:hover:bg-mint-500/10 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy-900 mb-1">Adres</h3>
-                    <p className="text-gray-500">{contact.address.full}</p>
+                    <h3 className="font-semibold text-foreground mb-1">Adres</h3>
+                    <p className="text-text-secondary">{contact.address.full}</p>
                   </div>
                 </div>
 
                 {/* Hours */}
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
+                <div className="flex items-start gap-4 p-6 rounded-xl bg-surface hover:bg-mint-200/20 dark:hover:bg-mint-500/10 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy-900 mb-1">Godziny otwarcia</h3>
-                    <p className="text-gray-500">{hours.weekdays.label}: {hours.weekdays.open} - {hours.weekdays.close}</p>
-                    <p className="text-gray-500">{hours.saturday.label}: {hours.saturday.open} - {hours.saturday.close}</p>
-                    <p className="text-gray-500">{hours.sunday.label}: {hours.sunday.status}</p>
+                    <h3 className="font-semibold text-foreground mb-1">Godziny otwarcia</h3>
+                    <p className="text-text-secondary">{hours.weekdays.label}: {hours.weekdays.open} - {hours.weekdays.close}</p>
+                    <p className="text-text-secondary">{hours.saturday.label}: {hours.saturday.open} - {hours.saturday.close}</p>
+                    <p className="text-text-secondary">{hours.sunday.label}: {hours.sunday.status}</p>
                   </div>
                 </div>
 
                 {/* Company name + NIP */}
-                <div className="p-6 rounded-xl bg-gray-50">
-                  <p className="text-sm font-medium text-navy-900 mb-1">{siteData.company.fullName}</p>
-                  <p className="text-sm text-gray-400">NIP: {siteData.company.nip}</p>
+                <div className="p-6 rounded-xl bg-surface">
+                  <p className="text-sm font-medium text-foreground mb-1">{siteData.company.fullName}</p>
+                  <p className="text-sm text-text-muted">NIP: {siteData.company.nip}</p>
                 </div>
               </div>
             </AnimatedSection>

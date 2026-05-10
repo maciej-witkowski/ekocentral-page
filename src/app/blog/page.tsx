@@ -24,7 +24,7 @@ export default function BlogPage() {
               <AnimatedSection key={post.slug} delay={i * 0.1}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group block rounded-2xl bg-white border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-navy-900/5 transition-all duration-300 hover:-translate-y-1 h-full"
+                  className="group block rounded-2xl bg-surface-elevated border border-border overflow-hidden hover:shadow-xl hover:shadow-navy-900/5 dark:hover:shadow-black/20 transition-all duration-300 hover:-translate-y-1 h-full"
                 >
                   <div className="p-8">
                     <div className="flex items-center gap-2 mb-4">
@@ -32,12 +32,12 @@ export default function BlogPage() {
                         <Tag className="w-3 h-3" />
                         {post.tag}
                       </span>
-                      <span className="text-gray-400 text-xs">{post.date}</span>
+                      <span className="text-text-muted text-xs">{post.date}</span>
                     </div>
-                    <h2 className="text-xl font-bold text-navy-900 mb-3 group-hover:text-mint-500 transition-colors">
+                    <h2 className="text-xl font-bold text-foreground mb-3 group-hover:text-mint-500 transition-colors">
                       {post.title}
                     </h2>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    <p className="text-text-secondary text-sm leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-2 text-mint-500 text-sm font-medium group-hover:gap-3 transition-all">

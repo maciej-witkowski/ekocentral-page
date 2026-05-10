@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <Tag className="w-3 h-3" />
                 {post.tag}
               </span>
-              <span className="text-gray-400 text-sm">{post.date}</span>
+              <span className="text-text-muted text-sm">{post.date}</span>
             </div>
 
             <div
@@ -57,7 +57,7 @@ export default async function BlogPostPage({ params }: Props) {
             />
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2} className="mt-12 pt-8 border-t border-gray-200">
+          <AnimatedSection delay={0.2} className="mt-12 pt-8 border-t border-border">
             <Link
               href="/blog"
               className="text-mint-500 hover:text-mint-400 font-medium transition-colors"

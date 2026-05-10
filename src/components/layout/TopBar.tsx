@@ -3,6 +3,7 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import siteData from "@/data/site.json";
 import { formatPhone } from "@/lib/utils";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
 
 export function TopBar() {
   const { contact } = siteData;
@@ -31,6 +32,8 @@ export function TopBar() {
             <Mail className="w-3.5 h-3.5 text-mint-500" />
             <span>{contact.emails[0]}</span>
           </a>
+          <div className="h-5 w-px bg-white/20" />
+          <ThemeToggle />
         </div>
       </div>
     </div>

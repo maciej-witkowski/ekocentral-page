@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ──────────────────────────────────────
+   Static brand colors — inlined for perf
+   ────────────────────────────────────── */
 @theme inline {
   /* Brand Colors from Logo — #2abed0 cyan, #1e3548 navy, #fefefe white */
   --color-navy-900: #1e3548;
@@ -23,13 +28,38 @@
   --color-gray-800: #1E293B;
   --color-gray-900: #0F172A;
 
-  /* Semantic */
-  --color-background: #ffffff;
-  --color-foreground: #0F172A;
-
   /* Fonts */
   --font-heading: var(--font-outfit);
   --font-body: var(--font-inter);
+}
+
+/* ──────────────────────────────────────
+   Semantic tokens — use var() references
+   so .dark overrides take effect
+   ────────────────────────────────────── */
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #0F172A;
+  --color-surface: #F8FAFB;
+  --color-surface-elevated: #ffffff;
+  --color-border: #E2E8F0;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+}
+
+/* ──────────────────────────────────────
+   Dark Mode — semantic token overrides
+   ────────────────────────────────────── */
+.dark {
+  --color-background: #0F172A;
+  --color-foreground: #F1F5F9;
+  --color-surface: #1E293B;
+  --color-surface-elevated: #243e54;
+  --color-border: #334155;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
 }
 
 /* Smooth scrolling */
@@ -43,6 +73,7 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Heading font family */
@@ -55,7 +86,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading), system-ui, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-navy-900);
+  color: var(--color-text-primary);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -64,7 +95,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading), system-ui, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--color-navy-900);
+  color: var(--color-text-primary);
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
@@ -72,7 +103,7 @@ h1, h2, h3, h4 {
 .prose p {
   margin-bottom: 1rem;
   line-height: 1.75;
-  color: var(--color-gray-600);
+  color: var(--color-text-secondary);
 }
 
 .prose ul, .prose ol {
@@ -83,11 +114,11 @@ h1, h2, h3, h4 {
 .prose li {
   margin-bottom: 0.5rem;
   line-height: 1.75;
-  color: var(--color-gray-600);
+  color: var(--color-text-secondary);
 }
 
 .prose strong {
-  color: var(--color-navy-900);
+  color: var(--color-text-primary);
   font-weight: 600;
 }
 
@@ -99,13 +130,21 @@ h1, h2, h3, h4 {
   list-style-type: decimal;
 }
 
+.prose a {
+  color: var(--color-mint-500);
+}
+
+.prose hr {
+  border-color: var(--color-border);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-gray-100);
+  background: var(--color-surface);
 }
 
 ::-webkit-scrollbar-thumb {

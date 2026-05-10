@@ -15,8 +15,8 @@ export default function PrivacyPolicyPage() {
       <section className="py-14 md:py-20">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <div className="prose prose-gray max-w-none prose-headings:text-navy-900 prose-headings:font-bold prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600 prose-a:text-mint-500 prose-a:no-underline hover:prose-a:underline">
-              <p className="text-gray-500 leading-relaxed mb-8">
+            <div className="prose prose-gray max-w-none prose-headings:font-bold prose-a:no-underline hover:prose-a:underline">
+              <p className="text-text-secondary leading-relaxed mb-8">
                 Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych
                 przekazanych przez Użytkowników w związku z korzystaniem z serwisu internetowego pod
                 adresem <strong>ekocentral.pl</strong>.
@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
               </p>
 
               <hr />
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-text-muted">
                 <strong>Data aktualizacji:</strong> 11 maja 2026
               </p>
             </div>

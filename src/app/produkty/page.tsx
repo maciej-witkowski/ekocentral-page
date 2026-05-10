@@ -21,8 +21,8 @@ export default function ProduktyPage() {
             <div className="w-20 h-20 rounded-2xl bg-mint-500/15 flex items-center justify-center text-mint-500 mx-auto mb-6">
               <Construction className="w-10 h-10" />
             </div>
-            <h2 className="text-2xl font-bold text-navy-900 mb-4">Strona w przygotowaniu</h2>
-            <p className="text-gray-500 mb-8">Katalog produktów jest w trakcie przygotowania. Zapraszamy wkrótce!</p>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Strona w przygotowaniu</h2>
+            <p className="text-text-secondary mb-8">Katalog produktów jest w trakcie przygotowania. Zapraszamy wkrótce!</p>
             <Link href="/oferta" className="inline-flex items-center px-6 py-3 bg-mint-500 text-navy-900 font-semibold rounded-lg hover:bg-mint-400 transition-all">
               Zobacz ofertę
             </Link>

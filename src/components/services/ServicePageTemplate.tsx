@@ -45,7 +45,7 @@ export function generateServicePage(slug: ServiceSlug) {
               />
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2} className="mt-12 pt-8 border-t border-gray-200">
+            <AnimatedSection delay={0.2} className="mt-12 pt-8 border-t border-border">
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
                 <Link
                   href="/oferta"

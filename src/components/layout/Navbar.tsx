@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
 import navigation from "@/data/navigation.json";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
+import { useTheme } from "@/components/shared/ThemeProvider";
 
 interface NavItem {
   label: string;
@@ -16,6 +18,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -37,9 +40,11 @@ export function Navbar() {
   return (
     <nav
       className={`transition-all duration-300 ${
+        theme === "dark" ? "bg-navy-900" : "bg-white"
+      } ${
         scrolled
-          ? "bg-white shadow-lg shadow-navy-900/5"
-          : "bg-white"
+          ? "shadow-lg shadow-navy-900/5 dark:shadow-black/20"
+          : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
@@ -47,14 +52,14 @@ export function Navbar() {
         <Link href="/" className="flex-shrink-0">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src={theme === "dark" ? "/images/logo-dark.png" : "/images/logo.png"}
               alt="EKOCENTRAL - Hurtownia instalacyjna"
               width={240}
               height={56}
               className="h-12 w-auto"
               priority
             />
-            <div className="h-8 w-px bg-gray-300" />
+            <div className="h-8 w-px bg-border" />
             <Image
               src="/images/logo-sbs.jpg"
               alt="Grupa SBS"
@@ -78,7 +83,7 @@ export function Navbar() {
             >
               <Link
                 href={item.path}
-                className="flex items-center gap-1 px-4 py-2 text-[15px] font-medium text-gray-700 hover:text-mint-500 transition-colors rounded-lg hover:bg-mint-200/30"
+                className="flex items-center gap-1 px-4 py-2 text-[15px] font-medium text-text-secondary hover:text-mint-500 transition-colors rounded-lg hover:bg-surface"
               >
                 {item.label}
                 {item.children && (
@@ -89,12 +94,12 @@ export function Navbar() {
               {/* Dropdown */}
               {item.children && openDropdown === item.path && (
                 <div className="absolute top-full left-0 pt-2 min-w-[280px]">
-                  <div className="bg-white rounded-xl shadow-xl shadow-navy-900/10 border border-gray-100 overflow-hidden py-2">
+                  <div className="bg-surface-elevated rounded-xl shadow-xl shadow-navy-900/10 dark:shadow-black/30 border border-border overflow-hidden py-2">
                     {item.children.map((child) => (
                       <Link
                         key={child.path}
                         href={child.path}
-                        className="block px-5 py-2.5 text-sm text-gray-600 hover:text-mint-500 hover:bg-mint-200/20 transition-colors"
+                        className="block px-5 py-2.5 text-sm text-text-secondary hover:text-mint-500 hover:bg-surface transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -106,8 +111,8 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* CTA + Mobile Toggle */}
-        <div className="flex items-center gap-4">
+        {/* CTA + Theme Toggle (after Kontakt on desktop) + Mobile Toggle */}
+        <div className="flex items-center gap-2">
           <Link
             href="/kontakt"
             className="hidden lg:inline-flex items-center px-6 py-2.5 bg-mint-500 text-navy-900 font-semibold text-sm rounded-lg hover:bg-mint-400 transition-all hover:shadow-lg hover:shadow-mint-500/25"
@@ -115,9 +120,17 @@ export function Navbar() {
             Kontakt
           </Link>
 
+          {/* Theme toggle: visible on mobile always, on desktop only when scrolled (TopBar hidden) */}
+          <div className="lg:hidden">
+            <ThemeToggle variant="navbar" />
+          </div>
+          <div className={`hidden transition-opacity duration-300 ${scrolled ? "lg:block opacity-100" : "lg:hidden opacity-0"}`}>
+            <ThemeToggle variant="navbar" />
+          </div>
+
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-navy-900"
+            className="lg:hidden p-2 text-foreground"
             aria-label="Menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -127,14 +140,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-20 z-40 bg-white lg:hidden overflow-y-auto">
+        <div className="fixed inset-0 top-20 z-40 bg-background lg:hidden overflow-y-auto">
           <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <div key={item.path}>
                 <Link
                   href={item.path}
                   onClick={() => !item.children && setMobileOpen(false)}
-                  className="flex items-center justify-between py-3 text-gray-700 font-medium border-b border-gray-100"
+                  className="flex items-center justify-between py-3 text-foreground font-medium border-b border-border"
                 >
                   {item.label}
                   {item.children && (
@@ -161,7 +174,7 @@ export function Navbar() {
                         key={child.path}
                         href={child.path}
                         onClick={() => setMobileOpen(false)}
-                        className="block py-2 text-sm text-gray-500 hover:text-mint-500 transition-colors"
+                        className="block py-2 text-sm text-text-secondary hover:text-mint-500 transition-colors"
                       >
                         {child.label}
                       </Link>

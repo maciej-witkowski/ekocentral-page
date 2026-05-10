@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl dark:shadow-black/20">
                 <Image
                   src="/images/building.jpg"
                   alt="Siedziba EKOCENTRAL"
@@ -47,24 +47,24 @@ export default function AboutPage() {
               <span className="text-mint-500 font-semibold text-sm uppercase tracking-widest">
                 Nasza filozofia
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-3 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
                 Kim jesteśmy?
               </h2>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-text-secondary leading-relaxed mb-4">
                 EKOCENTRAL to hurtownia instalacyjna, która dostarcza wyjątkowy
                 asortyment produktów związanych z systemami grzewczymi oraz
                 instalacjami sanitarnymi. Nasza oferta obejmuje innowacyjne
                 rozwiązania, które gwarantują komfort i oszczędność energii w
                 każdym budynku.
               </p>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-text-secondary leading-relaxed mb-4">
                 Dążymy do tego, aby być niezawodnym partnerem dla fachowców w
                 branży instalacyjnej, oferując produkty o wysokiej jakości w
                 konkurencyjnych cenach. Nasze wsparcie techniczne jest zawsze
                 dostępne, aby zapewnić naszym klientom pełne bezpieczeństwo
                 instalacji.
               </p>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-text-secondary leading-relaxed">
                 W EKOCENTRAL rozumiemy, jak ważna jest szybka dostawa. Dlatego
                 nasze procesy logistyczne są zoptymalizowane, aby każdy zamówiony
                 produkt dotarł do klienta w jak najkrótszym czasie. Zaufaj nam,
@@ -76,18 +76,18 @@ export default function AboutPage() {
       </section>
 
       {/* Grupa SBS */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-20 md:py-28 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <AnimatedSection>
               <span className="text-mint-500 font-semibold text-sm uppercase tracking-widest">
                 Partnerstwo
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-3 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
                 Ekocentral – Członek Grupy Zakupowej SBS
               </h2>
               <div className="w-16 h-1 rounded-full bg-mint-500 mx-auto mb-8" />
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-text-secondary leading-relaxed mb-4">
                 Z dumą informujemy, że Ekocentral jest częścią prestiżowej Grupy
                 Zakupowej SBS – największej w Polsce organizacji zrzeszającej
                 hurtownie i sklepy instalacyjne. Dzięki tej współpracy możemy
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 konkurencyjnych cenach oraz dostęp do innowacyjnych rozwiązań w
                 branży instalacyjnej i grzewczej.
               </p>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-text-secondary leading-relaxed">
                 Ekocentral to firma stworzona przez doświadczoną załogę z blisko
                 20-letnim doświadczeniem, specjalizująca się w sprzedaży
                 nowoczesnych systemów grzewczych, wodno-kanalizacyjnych i

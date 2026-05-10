@@ -28,12 +28,12 @@ export default function DostawcyPage() {
               <AnimatedSection key={project.slug} delay={i * 0.1}>
                 <Link
                   href={`/dostawcy/${project.slug}`}
-                  className="group block rounded-2xl bg-white border border-gray-100 p-8 hover:shadow-xl hover:shadow-navy-900/5 transition-all duration-300 hover:-translate-y-1 h-full"
+                  className="group block rounded-2xl bg-surface-elevated border border-border p-8 hover:shadow-xl hover:shadow-navy-900/5 dark:hover:shadow-black/20 transition-all duration-300 hover:-translate-y-1 h-full"
                 >
-                  <h2 className="text-xl font-bold text-navy-900 mb-3 group-hover:text-mint-500 transition-colors">
+                  <h2 className="text-xl font-bold text-foreground mb-3 group-hover:text-mint-500 transition-colors">
                     {project.title}
                   </h2>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{project.description}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-4">{project.description}</p>
                   <span className="flex items-center gap-2 text-mint-500 text-sm font-medium group-hover:gap-3 transition-all">
                     Szczegóły <ArrowRight className="w-4 h-4" />
                   </span>

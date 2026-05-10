@@ -63,7 +63,7 @@ export function ServicesGrid() {
         <AnimatedSection delay={0.4} className="text-center mt-10">
           <Link
             href="/oferta"
-            className="inline-flex items-center gap-2 px-8 py-3 border-2 border-navy-900 text-navy-900 font-semibold rounded-lg hover:bg-navy-900 hover:text-white transition-all"
+            className="inline-flex items-center gap-2 px-8 py-3 border-2 border-foreground text-foreground font-semibold rounded-lg hover:bg-navy-900 hover:text-white dark:hover:bg-white dark:hover:text-navy-900 transition-all"
           >
             Zobacz wszystko
           </Link>
