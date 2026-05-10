@@ -45,7 +45,7 @@ export default function AboutPage() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <span className="text-mint-500 font-semibold text-sm uppercase tracking-widest">
-                Kim jesteśmy?
+                Nasza filozofia
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-3 mb-6">
                 Kim jesteśmy?

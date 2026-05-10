@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/PageHero";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Users, ShoppingCart, Calculator } from "lucide-react";
 import siteData from "@/data/site.json";
 import { formatPhone } from "@/lib/utils";
 
@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Kontakt z hurtownią instalacyjną",
   description:
     "Skontaktuj się z nami, aby uzyskać więcej informacji o produktach, wsparciu technicznym i cenach. Sprawdź naszą ofertę i skontaktuj się z nami już dziś.",
+};
+
+const departmentIcons: Record<string, React.ReactNode> = {
+  "Dział sprzedaży": <Users className="w-4 h-4" />,
+  "Zakupy": <ShoppingCart className="w-4 h-4" />,
+  "Księgowość": <Calculator className="w-4 h-4" />,
 };
 
 export default function KontaktPage() {
@@ -28,24 +34,43 @@ export default function KontaktPage() {
               </h2>
 
               <div className="space-y-6">
+                {/* Phone departments */}
                 <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-navy-900 mb-1">Telefon</h3>
-                    {contact.phones.map((phone) => (
-                      <a
-                        key={phone}
-                        href={`tel:${formatPhone(phone)}`}
-                        className="block text-gray-500 hover:text-mint-500 transition-colors"
-                      >
-                        {phone}
-                      </a>
-                    ))}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-navy-900 mb-4">Telefon</h3>
+                    <div className="space-y-4">
+                      {contact.departments.map((dept) => (
+                        <div key={dept.name}>
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-mint-500">
+                              {departmentIcons[dept.name]}
+                            </span>
+                            <span className="text-xs font-semibold uppercase tracking-wider text-navy-900/70">
+                              {dept.name}
+                            </span>
+                          </div>
+                          <div className="space-y-1 pl-6">
+                            {dept.contacts.map((c) => (
+                              <a
+                                key={c.phone}
+                                href={`tel:${formatPhone(c.phone)}`}
+                                className="flex items-center justify-between text-sm text-gray-500 hover:text-mint-500 transition-colors py-0.5"
+                              >
+                                <span className="font-medium text-navy-900/80">{c.person}</span>
+                                <span>{c.phone}</span>
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <Mail className="w-5 h-5" />
@@ -64,6 +89,7 @@ export default function KontaktPage() {
                   </div>
                 </div>
 
+                {/* Address */}
                 <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <MapPin className="w-5 h-5" />
@@ -74,6 +100,7 @@ export default function KontaktPage() {
                   </div>
                 </div>
 
+                {/* Hours */}
                 <div className="flex items-start gap-4 p-6 rounded-xl bg-gray-50 hover:bg-mint-200/20 transition-colors">
                   <div className="w-12 h-12 rounded-xl bg-mint-500/15 flex items-center justify-center text-mint-500 flex-shrink-0">
                     <Clock className="w-5 h-5" />
@@ -86,7 +113,9 @@ export default function KontaktPage() {
                   </div>
                 </div>
 
+                {/* Company name + NIP */}
                 <div className="p-6 rounded-xl bg-gray-50">
+                  <p className="text-sm font-medium text-navy-900 mb-1">{siteData.company.fullName}</p>
                   <p className="text-sm text-gray-400">NIP: {siteData.company.nip}</p>
                 </div>
               </div>
@@ -160,7 +189,7 @@ export default function KontaktPage() {
           <AnimatedSection delay={0.3} className="mt-16">
             <div className="rounded-2xl overflow-hidden shadow-lg h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2400.0!2d18.0!3d53.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDA3JzEyLjAiTiAxOMKwMDAnMDAuMCJF!5e0!3m2!1spl!2spl!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2400.5!2d17.9903!3d53.1235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47030738e9e7e8e7%3A0x9c0d41e0eae6e8d2!2sGrunwaldzka%20227%2C%2085-451%20Bydgoszcz%2C%20Poland!5e0!3m2!1spl!2spl!4v1"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

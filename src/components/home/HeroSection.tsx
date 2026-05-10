@@ -14,7 +14,7 @@ export function HeroSection() {
           src="/images/building-drone.jpg"
           alt="EKOCENTRAL hurtownia instalacyjna"
           fill
-          className="object-cover"
+          className="object-cover object-[65%_50%] md:object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/60" />
@@ -31,7 +31,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-mint-500/15 border border-mint-500/30 rounded-full text-mint-400 text-sm font-medium mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-mint-500/15 border border-mint-500/30 rounded-full text-mint-400 text-sm font-medium mb-4">
               <span className="w-2 h-2 bg-mint-500 rounded-full animate-pulse" />
               Hurtownia instalacyjna
             </span>
@@ -41,9 +41,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-white/70 text-sm uppercase tracking-widest mb-4"
+            className="text-mint-400 text-sm md:text-base uppercase tracking-[0.25em] font-semibold mb-5"
           >
-            Zespół EKOCENTRAL zapewnia fachowe doradztwo techniczne oraz wsparcie
+            Zaufaj doświadczeniu
           </motion.p>
 
           <motion.h1

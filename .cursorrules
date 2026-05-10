@@ -1,0 +1,41 @@
+# EkoCentral Web Project - Agent Instructions
+
+You are an expert AI assistant tasked with developing and maintaining the EkoCentral Next.js application. Follow these instructions carefully:
+
+## 1. Project Context
+- **Framework:** Next.js (App Router, version 16.x)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Deployment:** GitHub Pages (Static HTML Export)
+- **Base Path:** `/ekocentral-page`
+
+## 2. Coding Standards
+- Write clean, concise, and strongly typed TypeScript code.
+- Prefer Functional Components with hooks.
+- Avoid deprecated React or Next.js patterns.
+- Use `lucide-react` for any UI icons.
+- Ensure all components are responsive (mobile-first approach).
+
+## 3. Next.js & App Router Rules
+- Use the App Router (`src/app` directory) exclusively. Do not use the `pages` directory.
+- Utilize React Server Components (RSC) by default. Add `"use client"` only when client-side interactivity or hooks (like `useState`, `useEffect`, `usePathname`, or Framer Motion) are required.
+- Do not use Next.js built-in API routes (`app/api`) since the project uses `output: 'export'`.
+- All data fetching must be compatible with static generation.
+
+## 4. Images and Assets handling
+- **CRITICAL**: The project is deployed to a subdirectory (`/ekocentral-page`).
+- You must use the `next/image` component for images.
+- Next.js `basePath` handles link routing and most asset prefixes. However, when referencing raw paths in code, remember they will be deployed under the base path.
+- The project already has a custom `imageLoader.ts` configured in `next.config.ts`. Do not remove or alter it without user permission.
+
+## 5. Styling Guidelines
+- Use Tailwind CSS v4 for styling.
+- Avoid arbitrary values in Tailwind classes if a design token exists.
+- Ensure visually appealing, modern, and accessible design.
+- We utilize Framer Motion for animations. Keep animations subtle and professional.
+
+## 6. Git and File Modifications
+- Never overwrite `next.config.ts` without explicitly checking the `basePath` and `output: 'export'` settings.
+- Check existing `src/components` before creating new ones to avoid duplication.
+- When generating files, keep them within `src/` where appropriate.

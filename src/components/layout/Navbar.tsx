@@ -36,23 +36,33 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg shadow-navy-900/5"
+          ? "bg-white shadow-lg shadow-navy-900/5"
           : "bg-white"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        {/* Logo */}
+        {/* Logo — EkoCentral + SBS */}
         <Link href="/" className="flex-shrink-0">
-          <Image
-            src="/images/logo.jpg"
-            alt="EKOCENTRAL - Hurtownia instalacyjna"
-            width={200}
-            height={56}
-            className="h-12 w-auto"
-            priority
-          />
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/logo.png"
+              alt="EKOCENTRAL - Hurtownia instalacyjna"
+              width={240}
+              height={56}
+              className="h-12 w-auto"
+              priority
+            />
+            <div className="h-8 w-px bg-gray-300" />
+            <Image
+              src="/images/logo-sbs.jpg"
+              alt="Grupa SBS"
+              width={80}
+              height={36}
+              className="h-9 w-auto object-contain"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -15,7 +15,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function ServicesGrid() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-14 md:py-20">
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection>
           <SectionHeading

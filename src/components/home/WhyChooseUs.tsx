@@ -14,7 +14,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 md:py-28 bg-navy-900 relative overflow-hidden">
+    <section className="py-14 md:py-20 bg-navy-900 relative overflow-hidden">
       {/* Decorative blobs */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-mint-500/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-mint-400/5 rounded-full blur-[120px]" />

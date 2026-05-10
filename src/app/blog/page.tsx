@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/PageHero";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  notFound();
   return (
     <>
       <PageHero title="Blog" breadcrumbs={[{ label: "Blog" }]} />

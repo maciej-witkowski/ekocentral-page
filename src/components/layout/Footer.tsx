@@ -115,11 +115,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href={`tel:${formatPhone(contact.phones[0])}`}
+                  href={`tel:${formatPhone(contact.topBarPhone)}`}
                   className="flex items-start gap-3 text-white/60 hover:text-mint-400 transition-colors text-sm"
                 >
                   <Phone className="w-4 h-4 mt-0.5 text-mint-500 flex-shrink-0" />
-                  <span>{contact.phones.join(", ")}</span>
+                  <span>{contact.topBarPhone}</span>
                 </a>
               </li>
               <li>

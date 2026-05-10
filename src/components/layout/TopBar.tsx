@@ -18,11 +18,11 @@ export function TopBar() {
         </div>
         <div className="flex items-center gap-6">
           <a
-            href={`tel:${formatPhone(contact.phones[0])}`}
+            href={`tel:${formatPhone(contact.topBarPhone)}`}
             className="flex items-center gap-2 hover:text-mint-400 transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-mint-500" />
-            <span>{contact.phones.join(", ")}</span>
+            <span>{contact.topBarPhone}</span>
           </a>
           <a
             href={`mailto:${contact.emails[0]}`}

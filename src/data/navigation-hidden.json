@@ -1,0 +1,25 @@
+[
+  { "label": "Produkty", "path": "/produkty", "hidden": true },
+  {
+    "label": "Dostawcy",
+    "path": "/dostawcy",
+    "hidden": true,
+    "children": [
+      { "label": "Remont biura w centrum miasta", "path": "/dostawcy/remont-biura-w-centrum-miasta" },
+      { "label": "Budowa nowego magazynu", "path": "/dostawcy/budowa-nowego-magazynu" },
+      { "label": "Modernizacja instalacji wodno-kanalizacyjnej", "path": "/dostawcy/modernizacja-instalacji-wodnokanalizacyjnej" }
+    ]
+  },
+  {
+    "label": "Blog",
+    "path": "/blog",
+    "hidden": true,
+    "children": [
+      { "label": "Jak skutecznie wybrać dostawcę materiałów budowlanych", "path": "/blog/jak-skutecznie-wybrac-dostawce-materialow" },
+      { "label": "Jak wybrać odpowiednie instalacje dla swojego budynku", "path": "/blog/jak-wybrac-odpowiednie-instalacje-dla" },
+      { "label": "Jak zrównoważyć efektywność energetyczną w budownictwie", "path": "/blog/jak-zrownowazyc-efektywnosc-energetyczna-w" },
+      { "label": "Jak innowacje zmieniają branżę budowlaną...", "path": "/blog/jak-innowacje-zmieniaja-branze-budowlana-i" }
+    ]
+  },
+  { "label": "Nasi dostawcy", "path": "/nasi-dostawcy", "hidden": true }
+]

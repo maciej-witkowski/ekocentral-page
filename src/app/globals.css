@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand Colors from Logo */
-  --color-navy-900: #0F2A3F;
-  --color-navy-800: #163247;
-  --color-navy-700: #1D4259;
-  --color-navy-600: #245570;
-  --color-mint-500: #2DD4A8;
-  --color-mint-400: #5EECC5;
-  --color-mint-300: #A0F4DE;
-  --color-mint-200: #D0FAF0;
+  /* Brand Colors from Logo — #2abed0 cyan, #1e3548 navy, #fefefe white */
+  --color-navy-900: #1e3548;
+  --color-navy-800: #243e54;
+  --color-navy-700: #2d4f68;
+  --color-navy-600: #3a6480;
+  --color-mint-500: #2abed0;
+  --color-mint-400: #4dcde0;
+  --color-mint-300: #8fe0ec;
+  --color-mint-200: #d0f1f7;
 
   /* Neutrals */
   --color-gray-50: #F8FAFB;

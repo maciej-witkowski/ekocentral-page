@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHero } from "@/components/shared/PageHero";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import Link from "next/link";
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function ProduktyPage() {
+  notFound();
   return (
     <>
       <PageHero title="Produkty" breadcrumbs={[{ label: "Produkty" }]} />

@@ -1,6 +1,7 @@
 {
   "company": {
     "name": "EKOCENTRAL",
+    "fullName": "Ekocentral Piotr Fiedorek Grupa SBS",
     "nip": "9671221980",
     "tagline": "Hurtownia instalacyjna",
     "subtitle": "Technika grzewcza i sanitarna"
@@ -16,8 +17,31 @@
       "zip": "85-451",
       "full": "ul. Grunwaldzka 227, 85-451 Bydgoszcz"
     },
+    "topBarPhone": "667 687 223",
     "phones": ["662 486 950", "662 486 991"],
-    "emails": ["biuro@ekocentral.pl", "kontakt@ekocentral.pl"]
+    "emails": ["biuro@ekocentral.pl"],
+    "departments": [
+      {
+        "name": "Dział sprzedaży",
+        "contacts": [
+          { "person": "Mateusz", "phone": "+48 662 486 950" },
+          { "person": "Grzegorz", "phone": "+48 662 486 991" },
+          { "person": "Piotr", "phone": "+48 667 687 223" }
+        ]
+      },
+      {
+        "name": "Zakupy",
+        "contacts": [
+          { "person": "Karolina", "phone": "+48 606 783 762" }
+        ]
+      },
+      {
+        "name": "Księgowość",
+        "contacts": [
+          { "person": "Martyna", "phone": "+48 882 498 087" }
+        ]
+      }
+    ]
   },
   "hours": {
     "weekdays": { "label": "Pon - Pt", "open": "06:30", "close": "17:00" },

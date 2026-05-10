@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
 export function TrustedPartner() {
   return (
-    <section className="py-20 md:py-28 bg-gray-50">
+    <section className="py-14 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
