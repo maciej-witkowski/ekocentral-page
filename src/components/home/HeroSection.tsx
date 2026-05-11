@@ -86,7 +86,7 @@ export function HeroSection() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/20"
             >
-              Napisz do nas
+              Zadzwoń do nas
             </Link>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/PageHero";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { ContactForm } from "@/components/shared/ContactForm";
 import { Phone, Mail, MapPin, Clock, Users, ShoppingCart, Calculator } from "lucide-react";
 import siteData from "@/data/site.json";
 import { formatPhone } from "@/lib/utils";
@@ -123,65 +124,7 @@ export default function KontaktPage() {
 
             {/* Contact form */}
             <AnimatedSection delay={0.2}>
-              <div className="bg-navy-900 rounded-2xl p-8 md:p-10">
-                <h2 className="text-2xl font-bold text-white mb-2">
-                  Napisz do nas
-                </h2>
-                <p className="text-white/60 mb-8">
-                  Wypełnij formularz, a skontaktujemy się z Tobą najszybciej jak to możliwe.
-                </p>
-
-                <form className="space-y-5">
-                  <div>
-                    <label htmlFor="name" className="block text-white/80 text-sm mb-2">Imię i nazwisko</label>
-                    <input
-                      id="name"
-                      type="text"
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/30 focus:outline-none focus:border-mint-500 transition-colors"
-                      placeholder="Jan Kowalski"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-white/80 text-sm mb-2">Email</label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/30 focus:outline-none focus:border-mint-500 transition-colors"
-                      placeholder="jan@firma.pl"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-white/80 text-sm mb-2">Telefon</label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/30 focus:outline-none focus:border-mint-500 transition-colors"
-                      placeholder="600 000 000"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-white/80 text-sm mb-2">Wiadomość</label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/30 focus:outline-none focus:border-mint-500 transition-colors resize-none"
-                      placeholder="Twoja wiadomość..."
-                    />
-                  </div>
-                  <p className="text-white/40 text-xs">
-                    Wysyłając formularz, akceptujesz naszą{" "}
-                    <a href="/privacy-policy" className="text-mint-400 underline">
-                      politykę prywatności
-                    </a>.
-                  </p>
-                  <button
-                    type="submit"
-                    className="w-full px-6 py-3.5 bg-mint-500 text-navy-900 font-semibold rounded-lg hover:bg-mint-400 transition-all hover:shadow-lg hover:shadow-mint-500/25"
-                  >
-                    Wyślij wiadomość
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </AnimatedSection>
           </div>
 

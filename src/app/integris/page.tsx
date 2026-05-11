@@ -71,7 +71,7 @@ export default function IntegrisPage() {
               href="/kontakt"
               className="inline-flex items-center px-8 py-3.5 bg-mint-500 text-navy-900 font-semibold rounded-lg hover:bg-mint-400 transition-all hover:shadow-lg hover:shadow-mint-500/25"
             >
-              Napisz do nas
+              Zadzwoń do nas
             </Link>
           </AnimatedSection>
         </div>

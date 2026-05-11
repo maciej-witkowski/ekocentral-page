@@ -147,7 +147,7 @@ export default function AboutPage() {
               href="/kontakt"
               className="inline-flex items-center px-8 py-4 bg-mint-500 text-navy-900 font-semibold rounded-xl hover:bg-mint-400 transition-all hover:shadow-xl hover:shadow-mint-500/25 text-lg"
             >
-              Napisz do nas
+              Zadzwoń do nas
             </Link>
           </AnimatedSection>
         </div>
