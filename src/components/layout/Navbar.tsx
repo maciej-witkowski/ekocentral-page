@@ -42,8 +42,8 @@ export function Navbar() {
       className={`transition-all duration-300 ${
         scrolled
           ? theme === "dark"
-            ? "bg-navy-900/80 backdrop-blur-md shadow-lg shadow-black/20"
-            : "bg-white/80 backdrop-blur-md shadow-lg shadow-navy-900/5"
+            ? "bg-navy-900 shadow-lg shadow-black/20"
+            : "bg-white shadow-lg shadow-navy-900/5"
           : theme === "dark"
           ? "bg-navy-900"
           : "bg-white"
