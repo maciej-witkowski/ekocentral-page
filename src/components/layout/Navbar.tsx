@@ -40,14 +40,16 @@ export function Navbar() {
   return (
     <nav
       className={`transition-all duration-300 ${
-        theme === "dark" ? "bg-navy-900" : "bg-white"
-      } ${
         scrolled
-          ? "shadow-lg shadow-navy-900/5 dark:shadow-black/20"
-          : ""
+          ? theme === "dark"
+            ? "bg-navy-900/80 backdrop-blur-md shadow-lg shadow-black/20"
+            : "bg-white/80 backdrop-blur-md shadow-lg shadow-navy-900/5"
+          : theme === "dark"
+          ? "bg-navy-900"
+          : "bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-16' : 'h-20'}`}>
         {/* Logo — EkoCentral + SBS */}
         <Link href="/" className="flex-shrink-0">
           <div className="flex items-center gap-3">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
 export function AboutPreview() {
@@ -12,13 +13,19 @@ export function AboutPreview() {
           {/* Image */}
           <AnimatedSection>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-navy-900/10 dark:shadow-black/20">
-              <Image
-                src="/images/building.jpg"
-                alt="Siedziba EKOCENTRAL w Bydgoszczy"
-                width={700}
-                height={500}
-                className="w-full h-auto object-cover"
-              />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="w-full h-full"
+              >
+                <Image
+                  src="/images/building.jpg"
+                  alt="Siedziba EKOCENTRAL w Bydgoszczy"
+                  width={700}
+                  height={500}
+                  className="w-full h-auto object-cover"
+                />
+              </motion.div>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-mint-500 to-mint-400" />
             </div>
           </AnimatedSection>
